@@ -473,17 +473,131 @@ console.log(caseinSwitch(3));
 function switchOfStuff (numbr) {
   var answer = "" ;
     switch (numbr) {
-caseInPoint "a":
+case "a":
   answer = "apple";
   break;
-caseInPoint "b":
+case "b":
   answer = "bird";
   break;
-caseInPoint "c":
-  answer = "cat";
-  break; 
-    }
-    return answer;
-  }
+
+case "c":
+    answer = "cat";
+    break; 
+
+default:
+    answer = "stuff";
+    break;
+}
+return answer;      
+} 
 
 console.log(switchOfStuff("a"));
+
+// Multiple identical options in switch statements
+function sequentialSizes (val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+         answer = "Low";
+         break;
+    case 4:
+    case 5:
+    case 6:
+          answer = "Mid";
+          break;
+    case 7:
+    case 8:
+    case 9:
+          answer = "High";
+          break;
+  }
+     return answer;
+}
+
+console.log(sequentialSizes(6));
+
+// Replacing If Else Chains with Switch statements
+function chainToSwitch(value) {
+  var answer = "";
+  if (value === "bob"){
+    answer = "Marley";
+  
+  }
+  else if (value === 42) {
+    answer = "The Answer";
+  }
+  else if (value === 1) {
+    answer = "There is no #1";
+  }
+   else if (value === 99) {
+    answer =  "Missed me by this much!";
+   }
+   else if (value === 7) {
+    answer = "Ate Nine";
+   }
+   return answer;
+}
+
+console.log(chainToSwitch(7));
+
+function chainToSwitch1(val) {
+  var answer = "";
+  switch (val) {
+  case "bob":
+    answer = "Marley";
+    break;
+  
+  case 42:
+    answer = "The Answer";
+    break;
+  
+  case 1:
+    answer = "There is no #1";
+    break;
+  
+   case 99:
+    answer =  "Missed me by this much!";
+    break;
+   
+   case 7:
+    answer = "Ate Nine";
+    break;
+
+   }
+   return answer;
+}
+
+
+console.log(chainToSwitch1(7));
+
+// Returning Boolean Values from Functions
+
+function isLess (a, b) {
+  if ( a < b){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+console.log(isLess(10,15));
+
+function isLess1 (a,b) {
+  return a < b;
+}
+
+
+console.log(isLess1(10,15));
+
+// Returning Early Pattern from Functions
+function test (b,c) {
+  if ( b < 0 || c < 0) {
+    return "undefined";
+  }
+  
+}
+
+console.log(test(-5,7))
