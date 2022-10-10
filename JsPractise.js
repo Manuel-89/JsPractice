@@ -473,13 +473,13 @@ console.log(caseinSwitch(3));
 function switchOfStuff (numbr) {
   var answer = "" ;
     switch (numbr) {
-caseInPoint "a":
+case "a":
   answer = "apple";
   break;
-caseInPoint "b":
+case "b":
   answer = "bird";
   break;
-caseInPoint "c":
+case "c":
   answer = "cat";
   break; 
     }
